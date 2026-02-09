@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Codificador de Texto</title>
+</head>
+<body>
+
+<h2>Introduce tu texto:</h2>
+<textarea id="inputText" rows="4" cols="50"></textarea><br><br>
+
+<button onclick="codificarTexto()">Codificar</button>
+
+<h3>Resultado:</h3>
+<textarea id="outputText" rows="4" cols="50" readonly></textarea>
+
+<script>
+function codificarTexto() {
+    // Obtener el texto del textarea
+    const texto = document.getElementById('inputText').value;
+
+    // Codificar a Base64
+    const codificado = btoa(texto);
+
+    // Mostrar el resultado
+    document.getElementById('outputText').value = codificado;
+}
+</script>
+
+</body>
+</html>
